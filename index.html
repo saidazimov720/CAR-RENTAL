@@ -15,29 +15,37 @@
 </head>
 
 <body>
-    <div id="page"
-        class="h-full bg-gradient-to-r 
+    <div id="page" class="h-full bg-gradient-to-r 
         from-transparent to-slate-200/30 bg-slate-200
          text-slate-900 transition-colors duration-[2000ms] 
          antialiased relative overflow-hidden select-none">
 
-         <div id="loading" class="absolute inset-0 z-50 bg-slate-200/80
+        <div id="loading" class="absolute inset-0 z-50 bg-slate-200/80
           flex items-center justify-center">
-        
-          <svg class="animate-spin h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
-              <circle class="opacity-20" cx="12" cy="12" r="11" />
-              <path d="m23 12c0 6.1-4.9 11-11 11" />
-            </g>
-          </svg>
+
+            <svg class="animate-spin h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                    <circle class="opacity-20" cx="12" cy="12" r="11" />
+                    <path d="m23 12c0 6.1-4.9 11-11 11" />
+                </g>
+            </svg>
         </div>
 
         <model-viewer class="absolute left-0 top-0 w-full h-full z-30 pointer-events-none"
-                src="https://cdn.glitch.global/ccaf12bb-59b0-46bb-bd74-b9467ca22e3d/scene.gltf?v=1674149863924"
-                exposure="1"
-                shadow-intensity="3"
-                camera-orbit="0deg 10deg 20%"
-                camera-target="-9.5m -8m 5m"></model-viewer>
+            src="https://cdn.glitch.global/ccaf12bb-59b0-46bb-bd74-b9467ca22e3d/scene.gltf?v=1674149863924" exposure="1"
+            shadow-intensity="3" camera-orbit="0deg 10deg 20%" camera-target="-9.5m -8m 5m"></model-viewer>
+
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 z-0 pointer-events-none">
+            <div
+                class="title opacity-0 text-[clamp(200px,40vh,500px)] font-bold text-slate-900/5 opacity-0 pointer-events-none flex whitespace-nowrap will-change-transform">
+                <span class="mx-20">240K GT</span>
+                <span class="mx-20">240K GT</span>
+                <span class="mx-20">240K GT</span>
+                <span class="mx-20">240K GT</span>
+                <span class="mx-20">240K GT</span>
+                <span class="mx-20">240K GT</span>
+            </div>
+        </div>
 
     </div>
 </body>
