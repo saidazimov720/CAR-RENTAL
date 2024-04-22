@@ -178,4 +178,16 @@ car.addEventListener('load', (Event) => {
             gsap.to(car, carPosition(exposure3, orbit3, target3));
         }
     });
+
+    slideToButtons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            const index = e.target.dataset.slideTo;
+            if (index !== undefined) {
+                swiper.slideTo(index);
+            }
+            e.preventDefault();
+        });
+    });
+
+    
 })
