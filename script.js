@@ -101,4 +101,18 @@ car.addEventListener('load', (Event) => {
         }
       }
       setCarPosition();
+
+      const carPosition = (exposure, orbit, target) => {
+        return (
+          {
+            duration: 1.5,
+            ease: Power4.easeOut,
+            attr: {
+              ['exposure']: exposure,
+              ['camera-orbit']: orbit,
+              ['camera-target']: target,
+            }
+          }
+        );
+      };
 })
