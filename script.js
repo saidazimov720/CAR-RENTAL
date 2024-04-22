@@ -189,5 +189,18 @@ car.addEventListener('load', (Event) => {
         });
     });
 
-    
+    colorButtons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            const color = e.target.dataset.color;
+            if (color !== undefined) {
+                paint.pbrMetallicRoughness.setBaseColorFactor(color);
+            }
+
+            colorButtons.forEach((otherButton) => {
+                otherButton.classList.remove('active');
+            });
+            e.target.classList.add('active');
+            e.preventDefault();
+        })
+    })
 })
