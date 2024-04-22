@@ -115,4 +115,8 @@ car.addEventListener('load', (Event) => {
           }
         );
       };
+
+      gsap.to(car, carPosition(exposure1, orbit1, target1));
+
+      swiper.on('')
 })
