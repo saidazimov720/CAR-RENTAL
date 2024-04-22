@@ -75,5 +75,17 @@ car.addEventListener('load', (Event) => {
         ease: Power4.easeOut,
         autoAlpha: 0,
     });
-    
+
+    const materials = car.model.materials,
+    paint = materials[10];
+    paint.pbrMetallicRoughness.setBaseColorFactor('#CBD5E1');
+    const exposure1 = '1',
+        orbit1 = '0deg 50deg 50%',
+        exposure2 = '0.4',
+        orbit2 = '-60deg 60deg 50%',
+        exposure3 = '1',
+        orbit3 = '44deg 83deg 50%';
+  let target1,
+      target2,
+      target3;
 })
