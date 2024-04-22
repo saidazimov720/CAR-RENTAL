@@ -118,5 +118,52 @@ car.addEventListener('load', (Event) => {
 
       gsap.to(car, carPosition(exposure1, orbit1, target1));
 
-      swiper.on('')
+      swiper.on('slideChange', function () {
+        if ( swiper.activeIndex === 0 ) {
+          gsap.to(car, carPosition(exposure1, orbit1, target1));
+          page.classList.remove('bg-zinc-900');
+          page.classList.add('bg-slate-200');
+        } else if ( swiper.activeIndex === 1 ) {
+          gsap.to(car, carPosition(exposure2, orbit2, target2));
+          page.classList.remove('bg-slate-200');
+          page.classList.add('bg-zinc-900');
+        } else if ( swiper.activeIndex === 2 ) {
+          gsap.to(car, carPosition(exposure3, orbit3, target3));
+          page.classList.remove('bg-zinc-900');
+          page.classList.add('bg-slate-200');
+        }
+        
+        if ( swiper.activeIndex === 0 ) {
+          gsap.to(inner1, innerAnimationActive);
+          gsap.to(title, innerAnimationActive);
+        } else {
+          gsap.to(inner1, innerAnimationHidden);
+          gsap.to(title, innerAnimationHidden);
+        }
+        
+        if ( swiper.activeIndex === 1 ) {
+          gsap.to(inner2, innerAnimationActive);
+        } else {
+          gsap.to(inner2, innerAnimationHidden);
+        }
+        
+        if ( swiper.activeIndex === 2 ) {
+          gsap.to(inner3, innerAnimationActive);
+          gsap.to(bgImage, {
+            duration: 1,
+            delay: 1,
+            ease: Power4.easeOut,
+            autoAlpha: 1,
+            yPercent: -50,
+          });
+        } else {
+          gsap.to(inner3, innerAnimationHidden);
+          gsap.to(bgImage, {
+            duration: 0.5,
+            ease: Power4.easeOut,
+            autoAlpha: 0,
+            yPercent: 0,
+          });
+        }
+      });
 })
