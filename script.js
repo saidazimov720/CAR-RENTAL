@@ -169,13 +169,12 @@ car.addEventListener('load', (Event) => {
 
     swiper.on('resize', function () {
         setCarPosition();
+
         if (swiper.activeIndex === 0) {
             gsap.to(car, carPosition(exposure1, orbit1, target1));
-        }
-        else if (swiper.activeIndex === 1) {
+        } else if (swiper.activeIndex === 1) {
             gsap.to(car, carPosition(exposure2, orbit2, target2));
-        }
-        else if (swiper.activeIndex === 2) {
+        } else if (swiper.activeIndex === 2) {
             gsap.to(car, carPosition(exposure3, orbit3, target3));
         }
     });
