@@ -68,3 +68,12 @@ const swiper = new Swiper(slider, {
         }
       },
 })
+
+car.addEventListener('load', (Event) => {
+    gsap.to(loading, {
+        duration: 1,
+        ease: Power4.easeOut,
+        autoAlpha: 0,
+    });
+    
+})
