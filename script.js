@@ -24,3 +24,18 @@ const innerAnimationHidden = {
     autoAlpha: 0, 
     yPercent: -20,
 };
+
+const swiper = new Swiper(slider, {
+    direction: 'vertical',
+    speed: 1500,
+    grabCursor: true,
+    touchRatio: 2,
+    threshold: 1,
+    preventInteractionOnTransition: true,
+    mousewheel: {
+      forceToAxis: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+})
