@@ -18,3 +18,9 @@ const innerAnimationActive = {
     yPercent: 0,
 };
 
+const innerAnimationHidden = {
+    duration: 1, 
+    ease: Power4.easeOut, 
+    autoAlpha: 0, 
+    yPercent: -20,
+};
