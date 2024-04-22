@@ -40,7 +40,7 @@ const swiper = new Swiper(slider, {
     },
     on: {
         init: () => {
-          /* SLIDER & TITLE FADE IN */
+          
           gsap.to(slider, {
             duration: 1,
             ease: Power4.easeOut,
