@@ -88,4 +88,17 @@ car.addEventListener('load', (Event) => {
   let target1,
       target2,
       target3;
+    
+      const setCarPosition = () => {
+        if (window.innerWidth <= 900) {
+          target1 = '-9.5m -11.9m 4.2m';
+          target2 = '-8.8m -12.7m 4.8m';
+          target3 = '-9.8m -10m 3.8m';
+        } else {
+          target1 = '-9.5m -12.9m 2.2m';
+          target2 = '-5.8m -12.5m 3.8m';
+          target3 = '-12m -10.7m 1.7m';
+        }
+      }
+      setCarPosition();
 })
