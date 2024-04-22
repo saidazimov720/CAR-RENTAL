@@ -17,3 +17,4 @@ const innerAnimationActive = {
     autoAlpha: 1,
     yPercent: 0,
 };
+
